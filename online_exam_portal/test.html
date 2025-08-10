@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4f1f4;
+            margin: 0; padding: 0; text-align: center; color: #333;
+        }
+        .container { width: 60%; margin: auto; padding: 20px; }
+        .question-box {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-align: left;
+        }
+        p { font-weight: bold; margin-bottom: 10px; }
+        input { margin: 5px 0; }
+        .submit-box { margin-top: 30px; }
+        button {
+            padding: 12px 25px;
+            border: none;
+            background: linear-gradient(135deg, #00aaff, #0077b6);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+        button:hover {
+            background: linear-gradient(135deg, #0077b6, #00aaff);
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function submitTest() {
+            const params = new URLSearchParams(window.location.search);
+            let roll = params.get("roll");
+            let name = params.get("name");
+            let branch = params.get("branch");
+            let year = params.get("year");
+
+            let score = 0;
+            if (document.querySelector('input[name="q1"]:checked')?.value === "b") score++;
+            if (document.querySelector('input[name="q2"]:checked')?.value === "a") score++;
+            if (document.querySelector('input[name="q3"]:checked')?.value === "c") score++;
+
+            let results = JSON.parse(localStorage.getItem('allResults')) || [];
+            results.push({ roll, name, branch, year, score });
+            localStorage.setItem('allResults', JSON.stringify(results));
+
+            window.location.href = `results.html?roll=${roll}&name=${name}&branch=${branch}&year=${year}&score=${score}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>HTML Basics Test</h2>
+
+        <div class="question-box">
+            <p>1. What does HTML stand for?</p>
+            <label><input type="radio" name="q1" value="a"> Hyper Trainer Marking Language</label><br>
+            <label><input type="radio" name="q1" value="b"> Hyper Text Markup Language</label><br>
+            <label><input type="radio" name="q1" value="c"> Hyper Text Marketing Language</label>
+        </div>
+
+        <div class="question-box">
+            <p>2. Which tag is used to create a hyperlink?</p>
+            <label><input type="radio" name="q2" value="a"> &lt;a&gt;</label><br>
+            <label><input type="radio" name="q2" value="b"> &lt;link&gt;</label><br>
+            <label><input type="radio" name="q2" value="c"> &lt;href&gt;</label>
+        </div>
+
+        <div class="question-box">
+            <p>3. Which HTML element is used for the largest heading?</p>
+            <label><input type="radio" name="q3" value="a"> &lt;h3&gt;</label><br>
+            <label><input type="radio" name="q3" value="b"> &lt;h6&gt;</label><br>
+            <label><input type="radio" name="q3" value="c"> &lt;h1&gt;</label>
+        </div>
+
+        <div class="submit-box">
+            <button type="button" onclick="submitTest()">Submit Test</button>
+            <button type="button" onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+    </div>
+</body>
+</html>
