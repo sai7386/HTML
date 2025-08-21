@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes with CSD</title>
+    <style>
+        body {
+            height: 100vh;
+            background-color: #ccc;
+            justify-content: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .shape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background: grey;
+        }
+        .rectangle {
+            width: 140px;
+            height: 80px;
+            background: grey;
+        }
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: grey;
+            border-radius: 50%;
+        }
+        .oval {
+            width: 140px;
+            height: 80px;
+            background: grey;
+            border-radius: 50%;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid grey;
+            position: relative;
+        }
+        .triangle span {
+            position: absolute;
+            top: 60px;
+            left: -20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="shape square">CSD</div>
+        <br>
+        <div class="shape rectangle">CSD</div>
+        <br>
+        <div class="triangle"><span>CSD</span></div>
+        <br>
+        <div class="shape circle">CSD</div>
+        <br>
+        <div class="shape oval">CSD</div>
+        
+    </div>
+
+</body>
+</html>
