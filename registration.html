@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            background-color: grey;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+        input, textarea, select {
+            width: 200px;
+        }
+    </style>
+</head>
+<body align="center">
+    <section>
+        <h1>REGISTRATION FORM</h1>
+        <form>
+            <label for="fname">First Name: </label>
+            <input type="text" name="fname" id="fname"><br><br>
+            <label for="lname">Last Name: </label>
+            <input type="text" name="lname" id="lname"><br> <br>
+            <label for="gender">Gender: </label>
+            <select name="gender" id="gender"><br><br>
+                <option value="">NONE</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            <label for="hobbies">Hobbies: </label>
+            <textarea name="hobbies" id="hobbies" rows="3" cols="50"></textarea><br><br>
+            <label for="address">Address: </label>
+            <textarea name="address" id="address" rows="3" cols="50"></textarea>
+            <br><br>
+            <label for="qualification">Qualification: </label>
+           <select name="qualification" id="qualification">
+                <option value="">NONE</option>
+                <option value="B TECH">B.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+            </select><br><br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password"><br><br>
+            <label for="confirm">confirm password: </label>
+            <input type="password" name="password" id="password"><br><br>
+            <input type="checkbox" id="accept" name="terms" value="accept" required>
+            <label for="accept">Accept terms and conditions</label><br><br>
+            <input type="submit" value="submit" >
+            <input type="reset" value="reset">
+        </form>
+    </section>
+</body>
+</html>
