@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resize Image</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      transition: all 0.3s ease;
+    }
+
+    .controls {
+      font-size: 30px;
+      cursor: pointer;
+      margin: 20px;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+    <img id="myImage" src="logo.jpeg.jpg">
+    <div class="controls">
+    <button  onclick="resizeImage('decrease')">&lt;</button>
+    <button onclick="resizeImage('increase')"> &gt;</button>
+  </div>
+  <script>
+    function resizeImage(action) {
+      let img = document.getElementById("myImage");
+      let currentWidth = img.width;
+
+      if (action === "increase") {
+        img.style.width = (currentWidth + 2) + "px";
+      } else if (action === "decrease" && currentWidth > 50) {
+        img.style.width = (currentWidth - 2) + "px";
+      }
+    }
+  </script>
+
+</body>
+</html>
