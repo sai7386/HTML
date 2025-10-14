@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Department of CSD - AITAM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Department of Computer Science & Engineering (Data Science)</h1>
+    <p>Aditya Institute of Technology and Management (AITAM)</p>
+
+    <!-- Navigation Button (opens Google Maps directions) -->
+    <button onclick="openDirections()" 
+            style="margin-top:10px; background:#3b82f6; color:white; border:none; padding:10px 18px; border-radius:6px; cursor:pointer; font-weight:500;">
+       Navigate to CSD
+    </button>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="hod.html">HOD</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="students.html">Students</a>
+    <a href="career.html">Careers</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to CSD Department</h2>
+    <p>
+      Explore the pages above to learn more about our department, faculty, students,
+      and exciting career paths in Data Science.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Department of CSD, AITAM | All Rights Reserved
+  </footer>
+
+  <!-- JavaScript for Google Maps Navigation -->
+  <script>
+    function openDirections() {
+      // Google Maps share link for AITAM Department of CSD
+      const mapsUrl = "https://maps.app.goo.gl/d4uSe3bkTLgmDLDG7?g_st=ic";
+      window.open(mapsUrl, "_blank");
+    }
+  </script>
+</body>
+</html>

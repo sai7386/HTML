@@ -1,0 +1,87 @@
+/* Common styling for all pages */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #f7f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #fff; /* Text color visible on dark image */
+  line-height: 1.6;
+  background: url(""C:\Users\Sai Kiran\Desktop\Tinkering lab\csd\Aditya_Institute_of_Technology_and_Management2.avif"") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+header {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+nav {
+  background-color: #243c8a;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #3b82f6;
+}
+
+section {
+  padding: 30px 10%;
+  background: white;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #1e3a8a;
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f0f4ff;
+}
+
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  margin-top: 20px;
+}
